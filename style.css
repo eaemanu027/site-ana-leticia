@@ -2,30 +2,9 @@
    ✨ ANIMAÇÃO DE ACERTO (QUIZ)
 ========================= */
 
-@keyframes acertoAnimacao {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0px #00ff88;
-    }
-    50% {
-        transform: scale(1.15);
-        box-shadow: 0 0 25px #00ff88;
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px #00ff88;
-    }
-}
-
-.acertou {
-    background-color: #00ff88 !important;
-    color: black !important;
-    animation: acertoAnimacao 0.5s ease;
-    border: none;
-}
 @keyframes cair {
     to {
-        transform: translateY(110vh) rotate(720deg);
+        transform: translateY(100vh);
         opacity: 0;
     }
 }
