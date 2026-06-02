@@ -86,3 +86,10 @@ function coresConfete() {
     const cores = ["#00ff88", "#ff4d6d", "#ffd166", "#4cc9f0", "#b5179e"];
     return cores[Math.floor(Math.random() * cores.length)];
 }
+
+if (botao.textContent === respostaCorreta) {
+    botao.classList.add("acertou");
+    pontos++;
+
+    soltarConfete();
+}
