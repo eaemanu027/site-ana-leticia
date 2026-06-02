@@ -54,7 +54,22 @@ const perguntas = [
         correta: "31/01"
     }
 ];
+function soltarConfete() {
+    for (let i = 0; i < 30; i++) {
+        const confete = document.createElement("div");
 
+        confete.innerHTML = "🎉";
+        confete.style.position = "fixed";
+        confete.style.left = Math.random() * 100 + "vw";
+        confete.style.top = "-20px";
+        confete.style.fontSize = "20px";
+        confete.style.animation = "cair 2s linear";
+
+        document.body.appendChild(confete);
+
+        setTimeout(() => confete.remove(), 2000);
+    }
+}
 // =========================
 // ❤️ (FUTURO) BOTÃO "NÃO" FUGINDO
 // =========================
@@ -85,37 +100,4 @@ if (botaoSim) {
     });
 }
 
-function soltarConfete() {
-    for (let i = 0; i < 40; i++) {
-        const confete = document.createElement("div");
 
-        confete.style.position = "fixed";
-        confete.style.width = "8px";
-        confete.style.height = "8px";
-        confete.style.backgroundColor = coresConfete();
-        confete.style.left = Math.random() * window.innerWidth + "px";
-        confete.style.top = "-10px";
-        confete.style.opacity = Math.random();
-        confete.style.zIndex = 9999;
-
-        confete.style.animation = `cair ${1 + Math.random() * 2}s linear`;
-
-        document.body.appendChild(confete);
-
-        setTimeout(() => {
-            confete.remove();
-        }, 3000);
-    }
-}
-
-function coresConfete() {
-    const cores = ["#00ff88", "#ff4d6d", "#ffd166", "#4cc9f0", "#b5179e"];
-    return cores[Math.floor(Math.random() * cores.length)];
-}
-
-if (botao.textContent === respostaCorreta) {
-    botao.classList.add("acertou");
-    pontos++;
-
-    soltarConfete();
-}
