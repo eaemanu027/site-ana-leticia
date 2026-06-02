@@ -334,28 +334,31 @@ E você faz isso comigo o tempo todo.
 
         <h2>Cartas Secretas 💌</h2>
 
-        <button>Abrir quando estiver triste</button>
+        <section id="cartas">
 
-        <button>Abrir quando sentir saudade</button>
+    <h2>Cartas Secretas 💌</h2>
 
-        <button>Abrir quando estiver feliz</button>
+    <button onclick="abrirCarta('triste')">Abrir quando estiver triste</button>
+    <button onclick="abrirCarta('saudade')">Abrir quando sentir saudade</button>
+    <button onclick="abrirCarta('feliz')">Abrir quando estiver tendo um dia feliz</button>
+    <button onclick="abrirCarta('insegura')">Abrir quando estiver insegura</button>
+    <button onclick="abrirCarta('brava')">Abrir quando estiver brava comigo</button>
+    <button onclick="abrirCarta('ciumes')">Abrir quando estiver com ciúmes</button>
+    <button onclick="abrirCarta('rir')">Abrir quando quiser rir</button>
+    <button onclick="abrirCarta('abraco')">Abrir quando precisar de um abraço</button>
+    <button onclick="abrirCarta('duvida')">Abrir quando duvidar do meu amor</button>
+    <button onclick="abrirCarta('historia')">Abrir quando quiser lembrar da nossa história</button>
 
-        <button>Abrir quando estiver insegura</button>
+</section>
 
-        <button>Abrir quando estiver brava comigo</button>
-
-        <button>Abrir quando estiver com ciúmes</button>
-
-        <button>Abrir quando quiser rir</button>
-
-        <button>Abrir quando precisar de um abraço</button>
-
-        <button>Abrir quando duvidar do meu amor</button>
-
-        <button>Abrir quando quiser lembrar da nossa história</button>
-
-    </section>
-
+<!-- caixa da carta -->
+<div id="carta-modal" class="carta-modal">
+    <div class="carta-conteudo">
+        <p id="texto-carta"></p>
+        <button onclick="fecharCarta()">Fechar ❤️</button>
+    </div>
+    
+</div>
 <!-- QUIZ -->
 <section id="quiz">
 
